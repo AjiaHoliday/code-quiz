@@ -10,11 +10,11 @@
     <body>
         <main class="first">
             <div class="row header">
-                <div class ="col-md-10 col-sm-6">
+                <div class ="col-md-12 col-sm-12">
                     <h5 id="h-score">View High Scores</h5>
                 </div>
-                <div class ="col-md-2 col-sm-6">
-                    <h5 id="time">Time: 0 </h5>
+                <div class ="col-md-12 col-sm-12">
+                    <h5 id="time">Time: 0</h5>
                 </div>
             </div>
             
@@ -22,35 +22,40 @@
             
             <div class="wrapper">
                 <div class=" row ">
-                    <div class="col-md-10 col-sm-6">
+                    <div class="col-md-8 col-sm-12">
                         <h2>Coding Quiz Challenge</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-10 col-sm-6">
+                    <div class="col-md-8 col-sm-12">
                         <p>Answer the folling code-related questions within the time limit.
-                            <br> Keep in mind that incorrect answers will penalize your time and score by 15 seconds
+                            <br><br> Keep in mind that incorrect answers will penalize your time and score by 15 seconds
                         </p>
                         <button id="start" class="brn btn-primary btn-lg">Start Quiz</button>
                     </div>
                 </div>
             </div>
             <!-- beginning of question containter -->
+    
             <div class ="divContainer">
                 <!-- beginning of question display -->
-                <h3 id="title"></h3>
-                <ol id="q-list"></ol>
+                <h3 id="title">
+
+                </h3>
+                <ol id="q-list">
+  
+                </ol>
             </div>
             <br>
             <div id="response"></div>
 
-            <div class="finish">
+            <div class="finish justify-content-center">
                 <h3>!! GAME OVER !!</h3>
-                <p id="result"> </p>
-                <p id="errorSmg"></p>
+                <p id="result"></p>
+                <p id="errorMsg"></p>
                 <form class="form-inline">
                     <div class="form-group mb-2">
-                        <h5 id="staticEmail2">Enter Your Intials Here: </h5>
+                        <h5>Enter Your Intials Here: </h5>
                     </div>
                     <div class="form-group mx-sm-3 mb-2">
                         <input type="text" maxlenght="3" class="form-control" id="inputInitial" placeholder="Enter Your Initials">
@@ -61,14 +66,15 @@
 
             <div class = "final">
                  <h2>High Scores</h2>
-                    <div class="col-sm-10">
+                    <div class="col-sm-12">
                         <input type="text" readonly class="form-control-plaintext" id="userInScore" value="1.">
                     </div>
                 <button class="backBtn" onclick="reset()">Go Back</button>
                 <botton class="clearBtn" onclick="clearScore()">Clear High Scores</botton>
             </div>
-        </main>
-        <script src="./assets/scripts/questions.js"></script>
+        
         <script src="assets/scripts/script.js"></script>
+        <script src="assets/scripts/questions.js"></script>
+        </main>
     </body>
 </html>
