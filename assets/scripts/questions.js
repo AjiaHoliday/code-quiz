@@ -1,9 +1,14 @@
-// Create an  array of questions
+// Create an array of questions and answers
 var questions = [
     {
         title: "Commonly used data types DO NOT include:",
         choices: ["alerts", "strings", "booleans", "numbers"],
         answer: "alerts",
+    },
+    {
+        title: "Which one is a looping structure in JavaScript?",
+        choices: ["All the below", "For", "While", "do-while loops"],
+        answer: "All the below"
     },
     {
         title: "The condition in an if / else statement is enclosed within ____.",
@@ -16,69 +21,42 @@ var questions = [
         answer: "Import",
     },
     {
+        title: "Arrays in JavaScript can be used to store ____.",
+        choices: [
+          "numbers and strings",
+          "other arrays",
+          "booleans",
+          "all of the above"
+        ],
+        answer: "all of the above"
+    },
+    {
         title: "How to create an array in js ?",
         choices: ["var A[]=", "var A=[]", "var A{}=", "var A={}"],
 
         answer: "var A=[]",
     },
+    {
+        title: "Boolean operators that can be used in JavaScript include:",
+        choices: [
+          "'And' Operator &&",
+          "'Or' Operator ||",
+          "'Not' Operator !",
+          "All the above"
+        ],
+        answer: "All the above"
+    },
     {   
         title: "HTML element that can be accessed in a Javascript code: Chose the one that will return an array of elements",
-        choices: ["getElementById(‘idname’)", "getElementsByClass(‘classname’)", 
-        "getElementsByTagName(‘tagname’)", "querySelectorAll()"],
+        choices: ["querySelectorAll()", "getElementById(‘idname’)", "getElementsByClass(‘classname’)", 
+        "getElementsByTagName(‘tagname’)"],
         answer: "querySelectorAll()",
+    },
+    {
+        title: "What is the type of Pop up boxes available in JavaScript?:",
+        choices: ["Alert", "Confirm", "Prompt", "All the above"],
+        answer: "All the above"
     }
 ]
 
 
- /**Create next questions to be added to the HTML document dynamically*/
-var displayQuestions=function() {
-    var holdQ1Title = questions[i].title
-    hElement.textContent = holdQ1Title
-    var holdq1Choice1 = questions[i].choices[0];
-    var holdq1Choice2 = questions[i].choices[1];
-    var holdq1Choice3 = questions[i].choices[2];
-    var holdq1Choice4 = questions[i].choices[3];
-
-    orderListEl.innerHTML = '';
-
-    var liTag1 = document.createElement("li");
-        liTag1.setAttribute("class", "all_li")
-    var btn = document.createElement('button');
-        btn.setAttribute("class", "all_btn")
-        btn.textContent = holdq1Choice1;
-        liTag1.appendChild(btn)
-        orderListEl.appendChild(liTag1);
-        divContainerEl.appendChild(orderListEl);
-
-    var liTag2 = document.createElement("li");
-        liTag2.setAttribute("class", "all_li");
-    var btn2 = document.createElement('button');
-        btn2.setAttribute("class", "all_btn")
-        btn2.textContent = holdq1Choice2;
-        liTag2.appendChild(btn2)
-        orderListEl.appendChild(liTag2)
-        divContainerEl.appendChild(orderListEl);
-
-    var liTag3 = document.createElement("li");
-        liTag3.setAttribute("class", "all_li")
-    var btn3 = document.createElement('button');
-        btn3.setAttribute("class", "all_btn")
-        btn3.textContent = holdq1Choice3;
-        liTag3.appendChild(btn3)
-        orderListEl.appendChild(liTag3)
-        divContainerEl.appendChild(orderListEl);
-
-    var liTag4 = document.createElement("li");
-        liTag4.setAttribute("class", "all_li")
-    var btn4 = document.createElement('button');
-        btn4.setAttribute("class", "all_btn");
-        btn4.textContent = holdq1Choice4;
-        liTag4.appendChild(btn4);
-        orderListEl.appendChild(liTag4);
-        divContainerEl.appendChild(orderListEl);
-    var allBtnEl = document.querySelectorAll(".all_btn")
-        allBtnEl.forEach(function (event) {
-        event.addEventListener("click", onClickHandler)
-    });
-
-}

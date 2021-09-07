@@ -8,73 +8,43 @@
         <title>Code Quiz</title>
     </head>
     <body>
-        <main class="start">
-            <div class="row header">
-                <div class ="col-md-12 col-sm-12">
-                    <h5 id="h-score">View High Scores</h5>
-                </div>
-                <div class ="col-md-12 col-sm-12">
-                    <h5 id="time">Time: 0</h5>
-                </div>
+        <div class="row header">
+            <div class ="col-md-11 col-sm-6">
+                <h5 class="scores"><a href="score.html">View High Scores</a></h5>
             </div>
-            
+            <div class ="col-md-1 col-sm-6">
+                <h5 class="timer">Time: <span id="time">0</span></h5>
+            </div>            
             <br><br>
-            
             <div class="wrapper">
-                <div class=" row ">
-                    <div class="col-md-8 col-sm-12">
-                        <h2>Coding Quiz Challenge</h2>
-                    </div>
-                </div>
                 <div class="row">
-                    <div class="col-md-8 col-sm-12">
+                    <div class="col-md-2"></div>
+                    <div id="start" class="col-md-8 col-sm-12 start">
+                        <h1>Coding Quiz Challenge</h1>
                         <p>Answer the folling code-related questions within the time limit.
-                            <br><br> Keep in mind that incorrect answers will penalize your time and score by 15 seconds
+                            <br><br> Keep in mind that incorrect answers will penalize your time and score by 10 seconds<br><br>
                         </p>
-                        <button id="start" class="btn btn-primary btn-lg">Start Quiz</button>
+                        <button id="start" class="col-md-10 col-sm-12 btn-lg">Start Quiz</button>
                     </div>
-                </div>
-            </div>
+                </div>                       
             <!-- beginning of question containter -->
-    
-            <div class ="divContainer">
-                <!-- beginning of question display -->
-                <h3 id="title">
-
-                </h3>
-                <ol id="q-list">
-  
-                </ol>
+            <div id ="questions" class="hide row">
+                <h2 id="question-title"></h2>
+                <div id="choices" class="choices"></div>
             </div>
-            <br>
-            <div id="response"></div>
-
-            <div class="finish justify-content-center">
-                <h3>!! GAME OVER !!</h3>
-                <p id="result"></p>
-                <p id="errorMsg"></p>
-                <form class="form-inline">
-                    <div class="form-group mb-2">
-                        <h5>Enter Your Intials Here: </h5>
-                    </div>
-                    <div class="form-group mx-sm-3 mb-2">
-                        <input type="text" maxlenght="3" class="form-control" id="inputInitial" placeholder="Enter Your Initials">
-                    </div>
-                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
-                </form>
+            <!--final score screen-->
+            <div id="finish" class="hide">
+                <h2>!! ALL DONE !!</h2>
+                <p>Your final score is <span id="final-score"></span>.</p>
+                <p>
+                    Enter your initials: <input type="text" id="userInitials" max="3" />
+                    <button id="submit" class="mb-2">Submit</button>
+                </p>
             </div>
 
-            <div class = "final">
-                 <h2>High Scores</h2>
-                    <div class="col-sm-12">
-                        <input type="text" readonly class="form-control-plaintext" id="userInScore" value="1.">
-                    </div>
-                <button class="backBtn" onclick="reset()">Go Back</button>
-                <botton class="clearBtn" onclick="clearScore()">Clear High Scores</botton>
-            </div>
-        
-        <script src="assets/scripts/script.js"></script>
+            <div id="feedback" class="feedback hide"></div>
+        </div>
         <script src="assets/scripts/questions.js"></script>
-        </main>
+        <script src="assets/scripts/script.js"></script>
     </body>
 </html>
