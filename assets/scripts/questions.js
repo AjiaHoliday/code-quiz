@@ -1,21 +1,3 @@
-var timeElement = document.querySelector("#time");
-var wrapperElement = document.querySelector(".wrapper");
-var btnElement = document.querySelector("#start");
-var divContainerEl = document.querySelector(".divContainer");
-var hElement = document.querySelector("#title");
-var orderListEl = document.querySelector("#q-list");
-var finishDiv = document.querySelector(".finish");
-var finalScore = document.querySelector("#result");
-var errMsg = document.querySelector("#errorMsg");
-var initialInput = document.querySelector("#inputInitial").value;
-var submitEl = document.querySelector(".btn btn-primary mb-2");
-var responseDiv = document.querySelector("#response");
-var finaPageEl = document.querySelector(".final");
-var initialAndScore = document.querySelector("#userInScore");
-var firstPageEl = document.querySelector(".first");
-
-
-
 // Create an  array of questions
 var questions = [
     {

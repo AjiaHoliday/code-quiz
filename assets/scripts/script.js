@@ -1,4 +1,23 @@
-var timer = 76;
+// DOM elements
+var timeElement = document.querySelector("#time");
+var wrapperElement = document.querySelector(".wrapper");
+var btnElement = document.querySelector("#start");
+var divContainerEl = document.querySelector(".divContainer");
+var hElement = document.querySelector("#title");
+var orderListEl = document.querySelector("#q-list");
+var finishDiv = document.querySelector(".finish");
+var finalScore = document.querySelector("#result");
+var errMsg = document.querySelector("#errorMsg");
+var initialInput = document.querySelector("#inputInitial").value;
+var submitEl = document.querySelector(".btn btn-primary mb-2");
+var responseDiv = document.querySelector("#response");
+var finaPageEl = document.querySelector(".final");
+var userInfo = document.querySelector("#userInScore");
+var startPageEl = document.querySelector(".start");
+
+// quiz variables
+var curentQuestionIndex= 0;
+var timer = questions.length * 10;
 var timeCount;
 
 // timer function to start counting when quiz starts
@@ -67,7 +86,7 @@ function onClickHandler(event) {
         var highScores = timer;
         localStorage.getItem(highScores)
         finalScore.textContent = "Your final score is: " + highScores+"!";
-        localStorage.setItem("HighScores", highScores)
+        localStorage.setItem("highScores", highScores)
     }
 }
 
@@ -76,15 +95,15 @@ function onClickHandler(event) {
 var showLastPage =  function() {
     var userScore = localStorage.getItem("highScores");
     var userInitials = localStorage.getItem ("Initial");
-    if (userScore && userInitial === "") {
+    if (userScore && userInitials === "") {
         return;
     }
     finishDiv.textContent = "";
     var lastPageEl = document.querySelector(".final");
     lastPageEl.style.visibility="visible";
     var userInfo = document.querySelector("#userInScore");
-    userInfo.value = userInitial+": "+userScore
-};
+    userInfo.value = userInitials+" - "+ userScore;
+}
 
 
 
@@ -99,16 +118,12 @@ document.addEventListener("submit", function (event) {
     } else {
         errMsg.textContent = ""
         localStorage.getItem(initialInput);;
-         renderLastItem();
+        showLastPage();
     }
 
 })
 
 
-// function to refresh page back to the beginning
-function reset() {
-    location.reload();
-}
 
 //function to clean highscore board
 function clearScore() {
