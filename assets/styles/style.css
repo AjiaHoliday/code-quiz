@@ -87,6 +87,7 @@ button:hover {
     border-radius: 5px;
     color: white;   
     font-size: 1.em;
+    display: block;
 }
 
 input[type="text"] {
